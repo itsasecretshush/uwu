@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Envelope 💌</title>
+    <link rel="stylesheet" href="envelope.css">
+</head>
+<body>
+
+    <div class="envelope-container" onclick="openEnvelope()">
+        <div class="envelope"></div>
+        <div class="letter">
+            <button id="readMessageBtn" onclick="redirectToMessage()">Read Message?</button>
+
+        </div>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            document.querySelector(".envelope-container").classList.add("open");
+            document.getElementById("readMessageBtn").classList.remove("hidden");
+        }
+
+        function redirectToMessage() {
+            window.location.href = "msg.html";
+        }
+
+    </script>
+
+
+</body>
+</html>

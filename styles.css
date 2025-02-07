@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffe6f2;
+  font-family: 'Poppins', cursive, sans-serif;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+  border: 3px dashed #ffb6c1;
+}
+
+h1 {
+  font-size: 2.8em;
+  color: #ff6699;
+  text-shadow: 2px 2px 5px rgba(255, 182, 193, 0.5);
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.yes-button, .no-button {
+  font-size: 1.5em;
+  padding: 12px 25px;
+  margin: 5px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.yes-button {
+  background-color: #ff99cc;
+  color: white;
+}
+
+.yes-button:hover {
+  background-color: #fe568e;
+  transform: scale(1.1);
+}
+
+.no-button {
+  background-color: #ff6666;
+  color: white;
+}
+
+.no-button:hover {
+  background-color: #ff0000;
+  transform: scale(1.1);
+}
+
+.gif_container img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 15px;
+  margin-top: 20px;
+  border: 3px solid #ffb6c1;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+}
+
+/* Cute animations */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+h1 {
+  animation: bounce 1.5s infinite alternate;
+}
+
+button {
+  font-family: 'Poppins', cursive, sans-serif;
+}

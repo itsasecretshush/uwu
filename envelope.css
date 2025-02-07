@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe6f2;
+    font-family: 'Poppins', cursive, sans-serif;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+.envelope-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.envelope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffb6c1;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff99cc;
+    border-radius: 15px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transition: transform 1s ease-in-out;
+}
+
+.letter {
+    position: relative;
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.open .envelope {
+    transform: rotateX(90deg);
+}
+
+.open .envelope::before {
+    transform: translateY(-100%);
+}
+
+#readMessageBtn {
+    font-size: 1.5em;
+    padding: 22px 25px;
+    margin-top: 20px;
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.8);
+    display: block;
+    text-align: center;
+    font-family: 'Poppins', cursive, sans-serif;
+}
+
+#readMessageBtn:hover {
+    background-color: #ff66a3;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.5);
+    transform: scale(1.1);
+}
+
+#readMessageBtn:active {
+    transform: scale(0.95);
+}
+
+/* Show button when the envelope opens */
+#readMessageBtn.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+.open .letter {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+h1 {
+    color: #ff6699;
+    text-shadow: 2px 2px 5px rgba(255, 182, 193, 0.5);
+    font-family: 'Comic Sans MS', cursive;
+    animation: bounce 1.5s infinite alternate;
+}
+
+button {
+    font-family: 'Poppins', cursive, sans-serif;
+  }
+  
